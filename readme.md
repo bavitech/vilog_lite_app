@@ -14,5 +14,5 @@
 
 ### Step 4: Configure the device.
 
-- Enter a command manually or tap the three-dot menu to choose from preset commands.  
+- Enter password and set config for device
   ![alt text](1740534903191.jpg)
