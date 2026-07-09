@@ -22,5 +22,28 @@ VilogLDC
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:VilogLDC.Form1.RebrandDeviceNameText(System.String)">
+ <summary>
+ Cosmetic rebrand shared by every serial link: hides the physical device
+ brand name ("DRAGINO") behind "BAVITECH" before text reaches the user.
+ No reverse mapping exists for this one (unlike AT+/VILOG_), so it's safe
+ to apply unconditionally on any inbound text.
+ </summary>
+</member>
+<member name="M:VilogLDC.Form1.RebrandLoggerText(System.String)">
+ <summary>
+ Cosmetic rebrand for SerialPort1 (logger/config link, feeds RichTextBox2/4):
+ "AT+" -> "VILOG_" (uppercase, this link's convention) plus the shared
+ DRAGINO -> BAVITECH device-name rebrand.
+ </summary>
+</member>
+<member name="M:VilogLDC.Form1.RebrandDebugText(System.String)">
+ <summary>
+ Cosmetic rebrand for SerialPort2 (secondary/local debug link, feeds
+ RichTextBox3): "AT+" -> "Vilog_" (mixed-case, this link's convention).
+ Reversed on send via RichTextBox1.Text.Replace("Vilog_", "AT+") -
+ keep this spelling in sync with that reverse mapping.
+ </summary>
+</member>
 </members>
 </doc>
